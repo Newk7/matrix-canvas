@@ -22,8 +22,11 @@ app.use("/css", express.static(__dirname + "public/css"));
 app.use("/js", express.static(__dirname + "public/js"));
 app.use("/img", express.static(__dirname + "public/img"));
 
+app.set("views", "./views");
+app.set("view engine", "ejs");
+
 app.get("", (req, res) => {
-  res.sendFile(__dirname + "/views/index.html");
+  res.render("index");
 });
 
 app.listen(port, () => {

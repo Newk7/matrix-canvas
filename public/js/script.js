@@ -1,7 +1,4 @@
-// index.js
-
-function multiply(x, y) {
-  return x + y;
-}
-
-console.log(multiply(5, 6));
+const canvas = document.getElementById("canvas1");
+const ctx = canvas.getContext("2d");
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
